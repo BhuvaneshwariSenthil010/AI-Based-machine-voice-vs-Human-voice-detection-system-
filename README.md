@@ -242,7 +242,7 @@ for file in os.listdir(machine_path)[:400]:
         X.append(f)
         y.append(1)
 
-# Convert to numpy
+Convert to numpy
 X = np.array(X)
 y = np.array(y)
 
