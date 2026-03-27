@@ -317,16 +317,7 @@ Prediction: AI Generated Voice
 Confidence: 0.91
 
 Decision: High Confidence
-________________________________________
-**Applications**
- 
-•	Deepfake voice detection 
 
-•	Voice authentication systems 
-
-•	AI-generated content verification 
-
-•	Security and fraud detection 
 ________________________________________
 **Conclusion**
  
