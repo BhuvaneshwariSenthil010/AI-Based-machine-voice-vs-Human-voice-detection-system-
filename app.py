@@ -7,9 +7,7 @@ import pickle
 import sounddevice as sd
 from scipy.io.wavfile import write
 
-# ================================
-# LOAD MODEL
-# ================================
+
 model = pickle.load(open("model.pkl", "rb"))
 scaler = pickle.load(open("scaler.pkl", "rb"))
 
@@ -30,9 +28,6 @@ def extract_features(file_path):
     except:
         return None
 
-# ================================
-# DECISION LOGIC
-# ================================
 def decision(conf):
     if conf >= 0.85:
         return "High Confidence"
@@ -41,9 +36,6 @@ def decision(conf):
     else:
         return "Uncertain"
 
-# ================================
-# COMMON PREDICTION FUNCTION
-# ================================
 def predict_file(file_path):
     features = extract_features(file_path)
 
@@ -67,9 +59,6 @@ def predict_file(file_path):
 
     status_label.config(text="Done ✅", fg="green")
 
-# ================================
-# UPLOAD FUNCTION
-# ================================
 def upload_file():
     file_path = filedialog.askopenfilename(
         filetypes=[("Audio", "*.wav *.flac")]
@@ -80,9 +69,6 @@ def upload_file():
         app.update()
         predict_file(file_path)
 
-# ================================
-# RECORD FUNCTION
-# ================================
 def record_audio():
     fs = 16000
     duration = 3
@@ -100,9 +86,6 @@ def record_audio():
 
     predict_file("recorded.wav")
 
-# ================================
-# UI
-# ================================
 app = tk.Tk()
 app.title("Voice Classifier AI")
 app.geometry("450x420")
