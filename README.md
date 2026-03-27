@@ -273,21 +273,24 @@ pickle.dump(scaler, open("scaler.pkl", "wb"))
 
 print("Model saved successfully!")
 
-# Upload button
+Upload button
+
 tk.Button(app, text="Upload Audio",
           command=upload_file,
           font=("Arial", 12, "bold"),
           bg="#4CAF50", fg="white",
           width=20).pack(pady=10)
 
-# Record button
+Record button
+
 tk.Button(app, text=" Record Voice",
           command=record_audio,
           font=("Arial", 12, "bold"),
           bg="#FF5722", fg="white",
           width=20).pack(pady=10)
 
-# Output labels
+Output labels
+
 result_label = tk.Label(app, text="Prediction",
                         font=("Arial", 14, "bold"),
                         bg="#1e1e2f", fg="white")
